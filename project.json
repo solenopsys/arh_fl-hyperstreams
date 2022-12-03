@@ -1,0 +1,26 @@
+{
+  "name": "hyperstreams",
+  "projectType": "library",
+  "sourceRoot": "libs/data/hstream/src",
+  "prefix": "hyperconverged",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/data/hstream"],
+      "options": {
+        "jestConfig": "libs/data/hstream/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/hstream/src/**/*.ts",
+          "libs/data/hstream/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

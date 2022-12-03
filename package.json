@@ -1,0 +1,11 @@
+{
+  "name": "@solenopsys/sc-fl-hyperstreams",
+  "version": "0.9.1",
+  "dependencies": {
+    "number-generator": "^4.0.6"
+  },
+  "scripts": {
+    "test": "node index.js",
+    "build": "tsc -p tsconfig.lib.json"
+  }
+}
