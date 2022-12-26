@@ -1,9 +1,9 @@
-import { Action, createSelector, State, StateContext, Store } from "@ngxs/store";
-import { Injectable } from "@angular/core";
-import { patch } from "@ngxs/store/operators";
-import { WsPool } from "./ws-pool";
-import { HttpClient } from "@angular/common/http";
-import { firstValueFrom } from "rxjs";
+import {Action, createSelector, State, StateContext, Store} from "@ngxs/store";
+import {Injectable} from "@angular/core";
+import {patch} from "@ngxs/store/operators";
+import {WsPool} from "./ws-pool";
+import {HttpClient} from "@angular/common/http";
+import {firstValueFrom} from "rxjs";
 
 const filterMap = (map: { [key: string | number | symbol]: any }, id: any): { [key: string | number | symbol]: any } => {
   return Object.keys(map)

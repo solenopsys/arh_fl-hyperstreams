@@ -1,11 +1,11 @@
-import { Inject, Injectable } from "@angular/core";
+import {Injectable} from "@angular/core";
 
-import { Select, Store } from "@ngxs/store";
-import { AddSocket, UpdateServiceMapping } from "./hstreams.store";
-import { StreamsPool, WsPool } from "./ws-pool";
-import { BehaviorSubject, Observable } from "rxjs";
-import { DataHstreamModule } from "./data-hstream.module";
-import { Cluster, ClusterState } from "@solenopsys/lib-clusters";
+import {Select, Store} from "@ngxs/store";
+import {AddSocket, UpdateServiceMapping} from "./hstreams.store";
+import {StreamsPool, WsPool} from "./ws-pool";
+import {Observable} from "rxjs";
+import {DataHstreamModule} from "./data-hstream.module";
+import {Cluster, ClusterState} from "@solenopsys/lib-clusters";
 
 
 @Injectable({

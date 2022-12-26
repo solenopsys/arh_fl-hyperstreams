@@ -1,5 +1,5 @@
-import { HStream} from './hstream';
-import {firstValueFrom, Subject} from "rxjs";
+import {HStream} from './hstream';
+import {Subject} from "rxjs";
 
 describe('HStream', () => {
 
