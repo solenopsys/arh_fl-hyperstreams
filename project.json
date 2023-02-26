@@ -1,14 +1,14 @@
 {
-  "name": "hyperstreams",
+  "name": "fl-hyperstreams",
   "projectType": "library",
-  "sourceRoot": "packages/libs/hstream/src",
+  "sourceRoot": "packages/libraries/fl-hyperstreams/src",
   "prefix": "sc",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/libs/hstream"],
+      "outputs": ["coverage/packages/libraries/fl-hyperstreams"],
       "options": {
-        "jestConfig": "packages/libs/hstream/jest.config.ts",
+        "jestConfig": "packages/libraries/fl-hyperstreams/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -16,8 +16,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "packages/libs/hstream/src/**/*.ts",
-          "packages/libs/hstream/src/**/*.html"
+          "packages/libraries/fl-hyperstreams/src/**/*.ts",
+          "packages/libraries/fl-hyperstreams/src/**/*.html"
         ]
       }
     }

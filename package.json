@@ -1,5 +1,5 @@
 {
-  "name": "@solenopsys/hc-fl-hyperstreams",
+  "name": "@solenopsys/fl-hyperstreams",
   "version": "0.9.1",
   "dependencies": {
     "number-generator": "^4.0.6"
