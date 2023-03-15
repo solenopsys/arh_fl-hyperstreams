@@ -1,12 +1,15 @@
 {
   "name": "fl-hyperstreams",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "packages/libraries/fl-hyperstreams/src",
   "prefix": "sc",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/libraries/fl-hyperstreams"],
+      "outputs": [
+        "coverage/packages/libraries/fl-hyperstreams"
+      ],
       "options": {
         "jestConfig": "packages/libraries/fl-hyperstreams/jest.config.ts",
         "passWithNoTests": true
