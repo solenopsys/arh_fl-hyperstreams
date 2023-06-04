@@ -1,9 +1,11 @@
 import {Injectable} from "@angular/core";
 import {ReplaySubject, Subject, Subscription} from "rxjs";
-import {DataHstreamModule, HStream} from "..";
+
 import {ConnectSocket, DisconnectSocket, ErrorSocket, HStreamsState, SocketConnected} from "./hstreams.store";
 import {Store} from "@ngxs/store";
 import {aleaRNGFactory, NumberGenerator} from "number-generator";
+import {DataHstreamModule} from "./data-hstream.module";
+import {HStream} from "./hstream";
 
 export interface PoolItem {
   input: Subject<any>;

@@ -1,17 +1,18 @@
 import {Injectable} from "@angular/core";
 
-import {Select, Store} from "@ngxs/store";
+import {Select, Store,} from "@ngxs/store";
 import {AddSocket, UpdateServiceMapping} from "./hstreams.store";
 import {StreamsPool, WsPool} from "./ws-pool";
 import {Observable} from "rxjs";
 import {DataHstreamModule} from "./data-hstream.module";
-import {ClusterState, Cluster} from "@solenopsys/fl-clusters";
+import {ClusterState, Cluster} from "@solenopsys/fl-clusters"
 
 
 @Injectable({
     providedIn: DataHstreamModule
 })
 export class HStreamService {
+    //@TsIgnore
     @Select(ClusterState.getClusters) clusters$!: Observable<Cluster[]>;
 
 
@@ -46,6 +47,7 @@ export class HStreamService {
 
     createStringQuery(service: string, query: string, funcId: number): Observable<any> {
         const currentCluster = this.store.selectSnapshot(ClusterState.getCurrent);
+        if(!currentCluster) throw new Error("No current cluster");
         return this.createStringQueryCluster(this.genWsUrl(currentCluster), service, query, funcId);
     }
 
@@ -56,6 +58,7 @@ export class HStreamService {
 
     createBinaryQuery(service: string, query: ArrayBuffer, funcId: number): Observable<any> {
         const currentCluster = this.store.selectSnapshot(ClusterState.getCurrent);
+        if(!currentCluster) throw new Error("No current cluster");
         return this.createBinaryQueryCluster(this.genWsUrl(currentCluster), service, query, funcId);
     }
 
