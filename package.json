@@ -10,6 +10,6 @@
     "number-generator": "^4.0.6"
   },
   "scripts": {
-    "build": "xs-pack"
+    "build": "ng-packagr -p xs-package.json -c ../../../../tsconfig.packages.json"
   }
 }
