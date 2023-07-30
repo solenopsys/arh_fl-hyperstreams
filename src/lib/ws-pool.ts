@@ -7,7 +7,7 @@ import {aleaRNGFactory, NumberGenerator} from "number-generator";
 import {DataHstreamModule} from "./data-hstream.module";
 import {HStream} from "./hstream";
 
-export interface PoolItem {
+export type PoolItem ={
   input: Subject<any>;
   is?: Subscription;
   output: Subject<any>;
